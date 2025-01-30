@@ -1,27 +1,33 @@
-type pageInfo = {
+type PageInfo = {
   total: number
   perPage: number
 }
 
-type coverImage = {
+type CoverImage = {
   large: string
 }
+
 type MediaTitle = {
-  english: string
+  english?: string
   native: string
   romaji: string
 }
 
-type Media = {
+export type Media = {
   id: number
-  coverImage: coverImage
-  descrption: string
+  coverImage: CoverImage
   genres: string[]
   title: MediaTitle
+  episodes?: number
+  format?: string
+  averageScore?: number | undefined
+  isFavourite?: boolean
+  seasonYear?: number
+  type: string
 }
 
 type Page = {
-  pageInfo: pageInfo
+  pageInfo: PageInfo
   media: Media[]
 }
 

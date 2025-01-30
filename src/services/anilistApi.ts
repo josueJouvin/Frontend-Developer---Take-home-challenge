@@ -20,7 +20,11 @@ const GET_ANIME_LIST = gql`
           english
           native
         }
-        description
+        episodes
+        format
+        averageScore
+        isFavourite
+        seasonYear
         type
         genres
       }
