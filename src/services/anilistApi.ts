@@ -1,4 +1,5 @@
 import { request, gql } from 'graphql-request'
+import { AnimeListResponse } from '../types'
 
 const API_URL = 'https://graphql.anilist.co'
 
@@ -26,7 +27,7 @@ const GET_ANIME_LIST = gql`
     }
   }
 `
-export async function fetchAnimeList() {
-  const data = await request(API_URL, GET_ANIME_LIST)
+export async function fetchAnimeList(): Promise<AnimeListResponse> {
+  const data = await request<AnimeListResponse>(API_URL, GET_ANIME_LIST)
   return data
 }
