@@ -1,5 +1,5 @@
 import { Star } from 'lucide-react'
-import { AnimeCardProps, Media } from '../types'
+import { AnimeCardProps } from '../types'
 import { favoriteAnime } from '../services/favoriteAnimeService'
 import { useState } from 'react'
 import ModalInformation from './ModalInformation'
