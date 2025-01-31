@@ -34,3 +34,13 @@ type Page = {
 export type AnimeListResponse = {
   Page: Page
 }
+
+export type AnimeQueryVariables = {
+  search: string | null | undefined
+  page: number
+  perPage: number
+}
+
+export type ItemFilters = {
+  query: string
+}

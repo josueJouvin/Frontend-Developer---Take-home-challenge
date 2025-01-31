@@ -5,7 +5,7 @@ type AnimeCardProps = {
   anime: Media
 }
 
-const EnhancedAnimeCard = ({ anime }: AnimeCardProps) => {
+const AnimeCard = ({ anime }: AnimeCardProps) => {
   return (
     <>
       <div className='group relative  h-[400px] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out bg-gray-800 hover:cursor-pointer'>
@@ -58,4 +58,4 @@ const EnhancedAnimeCard = ({ anime }: AnimeCardProps) => {
   )
 }
 
-export default EnhancedAnimeCard
+export default AnimeCard

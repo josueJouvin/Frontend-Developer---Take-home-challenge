@@ -1,5 +1,5 @@
 import { request, gql } from 'graphql-request'
-import { AnimeListResponse } from '../types'
+import { AnimeListResponse, AnimeQueryVariables } from '../types'
 
 const API_URL = 'https://graphql.anilist.co'
 
@@ -31,7 +31,9 @@ const GET_ANIME_LIST = gql`
     }
   }
 `
-export async function fetchAnimeList(): Promise<AnimeListResponse> {
-  const data = await request<AnimeListResponse>(API_URL, GET_ANIME_LIST)
+
+export async function fetchAnimeList({ search, page, perPage }: AnimeQueryVariables): Promise<AnimeListResponse> {
+  const variables = { search, page, perPage }
+  const data = await request<AnimeListResponse>(API_URL, GET_ANIME_LIST, variables)
   return data
 }
