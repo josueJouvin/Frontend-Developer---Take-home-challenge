@@ -18,12 +18,17 @@ export type Media = {
   coverImage: CoverImage
   genres: string[]
   title: MediaTitle
-  episodes?: number
+  episodes?: number | null
   format?: string
   averageScore?: number | undefined
   isFavourite?: boolean
   seasonYear?: number
   type: string
+  mediaListEntry: null | any // Añadido
+  description: string // Añadido
+  status: string // Añadido
+  bannerImage: string // Añadido
+  siteUrl: string // Añadido
 }
 
 type Page = {
@@ -39,6 +44,10 @@ export type AnimeQueryVariables = {
   search: string | null | undefined
   page: number
   perPage: number
+}
+
+export type AnimeCardProps = {
+  anime: Media
 }
 
 export type ItemFilters = {

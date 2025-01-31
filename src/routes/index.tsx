@@ -17,22 +17,29 @@ function RouteComponent() {
   const { data, isLoading, isError } = useAnimeList({ search: query || undefined, page: 1, perPage: 30 })
   const navigate = useNavigate({ from: Route.fullPath })
 
+  console.log(data)
   return (
-    <div className=''>
-      <main className='px-5 container mx-auto my-5'>
-        <div className='flex justify-end mb-5'>
-          <input
-            className='input rounded-full px-5 py-2 border-2 border-transparent focus:outline-none focus:border-blue-500 placeholder-gray-400 transition-all duration-300 shadow-md text-black'
-            placeholder='Search...'
-            type='text'
-            value={query}
-            onChange={e => {
-              navigate({ search: prev => ({ ...prev, query: e.target.value }) })
-            }}
-          />
-        </div>
-        <div className='grid grid-cols-responsive gap-12'>{data?.Page.media.map(anime => <AnimeCard key={anime.id} anime={anime} />)}</div>
-      </main>
-    </div>
+    <>
+      <div className=''>
+        <a href='https://anilist.co/api/v2/oauth/authorize?client_id=24083&redirect_uri=http://localhost:5173&response_type=code'>
+          Login with AniList
+        </a>
+
+        <main className='px-5 container mx-auto my-5'>
+          <div className='flex justify-end mb-5'>
+            <input
+              className='input rounded-full px-5 py-2 border-2 border-transparent focus:outline-none focus:border-blue-500 placeholder-gray-400 transition-all duration-300 shadow-md text-black'
+              placeholder='Search...'
+              type='text'
+              value={query}
+              onChange={e => {
+                navigate({ search: prev => ({ ...prev, query: e.target.value }) })
+              }}
+            />
+          </div>
+          <div className='grid grid-cols-responsive gap-12'>{data?.Page.media.map(anime => <AnimeCard key={anime.id} anime={anime} />)}</div>
+        </main>
+      </div>
+    </>
   )
 }

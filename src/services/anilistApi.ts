@@ -27,6 +27,13 @@ const GET_ANIME_LIST = gql`
         seasonYear
         type
         genres
+        description
+        status
+        bannerImage
+        siteUrl
+        mediaListEntry {
+          id
+        }
       }
     }
   }
