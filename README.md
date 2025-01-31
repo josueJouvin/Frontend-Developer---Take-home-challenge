@@ -52,11 +52,6 @@ To run the project locally, follow these steps:
     git clone <https://github.com/josueJouvin/Frontend-Developer---Take-home-challenge.git>
     ```
 
-2. Navigate into the project folder:
-    ```bash
-    cd <project-folder>
-    ```
-
 3. Install dependencies:
     ```bash
     npm install
