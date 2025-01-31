@@ -23,17 +23,14 @@ function RouteComponent() {
   return (
     <>
       <div className=''>
-        <a href='https://anilist.co/api/v2/oauth/authorize?client_id=24083&redirect_uri=http://localhost:5173&response_type=code'>
-          Login with AniList
-        </a>
-
+        <h1 className='text-center text-2xl uppercase mt-5 font-bold'>Frontend Developer - Take home challenge</h1>
         <main className='px-5 container mx-auto my-5'>
           <div className='flex flex-col sm:flex-row justify-between items-center mb-5 gap-4'>
             <div className='flex gap-4'>
               <Link
                 to='/'
                 search={{ query }}
-                className='flex items-center px-4 py-2 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-colors duration-300'
+                className='flex items-center px-4 py-2 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-colors duration-300 [&.active]:font-bold'
               >
                 <Home className='w-5 h-5 mr-2' />
                 Home
@@ -41,7 +38,7 @@ function RouteComponent() {
               <Link
                 to='/favorites'
                 search={{ query }}
-                className='flex items-center px-4 py-2 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-colors duration-300'
+                className='flex items-center px-4 py-2 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-colors duration-300 [&.active]:font-bold'
               >
                 <Heart className='w-5 h-5 mr-2' />
                 Favorites
