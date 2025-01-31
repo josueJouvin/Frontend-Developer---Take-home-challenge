@@ -1,4 +1,4 @@
-import axios from 'axios'
+/*import axios from 'axios'
 
 const API_URL = 'https://graphql.anilist.co'
 
@@ -40,4 +40,6 @@ export async function favoriteAnime(mediaId: number, isFavourite: boolean) {
     console.error('Error al actualizar el anime favorito:', error)
     throw error
   }
-}
+}*/
+
+//Pueba para realizar mutacion del estado de favorito

@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+/*import { useEffect } from 'react'
 
 const AUTH_URL = 'https://anilist.co/api/v2/oauth/authorize'
 const CLIENT_ID = '24083'
@@ -18,3 +18,6 @@ export function useAuth() {
     }
   }, [])
 }
+*/
+
+//Prueba para realizar mutacion a la api de anilist

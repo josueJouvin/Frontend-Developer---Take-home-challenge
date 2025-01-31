@@ -20,14 +20,14 @@ function RouteComponent() {
           <div className='flex gap-4'>
             <Link
               to='..'
-              className='flex items-center px-4 py-2 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-colors duration-300 [&.active]:font-bold'
+              className='flex items-center px-4 py-2 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-colors duration-300 [&.active]:font-bold [&.active]:bg-gray-400'
             >
               <Home className='w-5 h-5 mr-2' />
               Home
             </Link>
             <Link
               to='/favorites'
-              className='flex items-center px-4 py-2 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-colors duration-300 [&.active]:font-bold'
+              className='flex items-center px-4 py-2 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-colors duration-300 [&.active]:font-bold [&.active]:bg-gray-400'
             >
               <Heart className='w-5 h-5 mr-2' />
               Favorites
