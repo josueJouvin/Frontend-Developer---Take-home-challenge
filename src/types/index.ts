@@ -52,4 +52,5 @@ export type AnimeCardProps = {
 
 export type ItemFilters = {
   query: string
+  page: number
 }
